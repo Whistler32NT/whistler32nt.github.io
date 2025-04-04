@@ -27,7 +27,7 @@
             width: 100%;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
             display: flex;
-            justify-content: space-between; /* Aligns content to both ends */
+            justify-content: center; /* Centers content horizontally */
             align-items: center; /* Centers content vertically */
             font-family: 'Segoe UI Variable', sans-serif;
             color: white;
@@ -35,53 +35,32 @@
             animation: slide-up 1s ease-out; /* Slide-up animation */
         }
 
-        .top-panel span {
-            font-size: 16px;
-            font-weight: 500;
-            white-space: nowrap; /* Prevents text from wrapping */
+        .top-panel .left {
+            position: absolute;
+            left: 10px; /* Keeps the logo on the left */
+            display: flex;
+            align-items: center;
         }
 
-        .top-panel {
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-    padding: 10px 40px; /* Increased padding to allow more space */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
-    display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    font-family: 'Segoe UI Variable', sans-serif;
-    color: white;
-    z-index: 1000;
-    animation: slide-up 1s ease-out; /* Slide-up animation */
-}
+        .top-panel .left img {
+            width: 50px; /* Set a larger width */
+            height: 50px; /* Set a larger height */
+            margin-right: 10px; /* Keeps spacing between the logo and the text */
+        }
 
-.top-panel .left {
-    position: absolute;
-    left: 10px; /* Keeps the logo on the left */
-    display: flex;
-    align-items: center;
-}
+        .center-link {
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            text-decoration: none; /* Removes underline */
+            margin: 0 10px; /* Adds spacing between buttons */
+            transition: color 0.3s ease; /* Adds a hover effect */
+        }
 
-.top-panel .left img {
-    width: 50px; /* Set a larger width */
-    height: 50px; /* Set a larger height */
-    margin-right: 10px; /* Keeps spacing between the logo and the text */
-}
+        .center-link:hover {
+            color: #87CEEB; /* Light blue hover color */
+        }
 
-.center-link {
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    text-decoration: none; /* Removes underline */
-    transition: color 0.3s ease; /* Adds a hover effect */
-}
-
-.center-link:hover {
-    color: #87CEEB; /* Light blue hover color */
-}
         /* Main heading styling */
         h1 {
             font-family: 'Segoe UI Variable Display', serif;
@@ -106,16 +85,6 @@
             animation: slide-up 1.4s ease-out; /* Slide-up animation */
         }
 
-        /* YouTube placeholder styling */
-        .youtube-placeholder {
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-            color: white;
-            margin: 40px 0;
-            animation: slide-up 1.6s ease-out; /* Slide-up animation */
-        }
-
         /* Bottom panel styling */
         .bottom-panel {
             background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
@@ -131,18 +100,6 @@
             z-index: 1000;
             animation: slide-up 1.8s ease-out; /* Slide-up animation */
         }
-
-        .additional-panel {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    margin: 20px auto;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    animation: slide-up 1.6s ease-out; /* Slide-up animation */
-}
 
         .bottom-panel span {
             font-size: 14px;
@@ -162,38 +119,27 @@
     </style>
 </head>
 <body>
-<!-- Top panel -->
-<div class="top-panel">
-    <div class="left">
-        <img src="logo.png" alt="Logo"> <!-- Replace with your logo file -->
-    </div>
-    <a href="my-plans.html" class="center-link">My plans</a> <!-- Link to another .html file -->
-</div>
+    <!-- Top panel -->
+    <div class="top-panel">
+        <div class="left">
+            <img src="logo.png" alt="Logo"> <!-- Replace with your logo file -->
+        </div>
+        <a href="my-plans.html" class="center-link">My plans</a> <!-- Link to my-plans.html -->
+        <a href="mods.html" class="center-link">Mods</a> <!-- Link to mods.html -->
     </div>
 
     <!-- Main heading -->
     <h1>Whistler's Website</h1>
 
-
-<!-- Welcome box -->
-<div class="welcome-box">
-    <h2>Hi there!</h2>
-    <p>You've landed in Whistler's Website. Welcome! Take a look and have a nice day!</p>
-</div>
-
-<!-- New panel -->
-<div class="additional-panel">
-    <h2>About Me</h2>
-    <p>My name is Andrew, and I'm a 15 year old that makes videos about Windows betas, mods, malware, macOS videos and more.</p>
-</div>
-
-    <!-- YouTube placeholder -->
-    <div class="youtube-placeholder">
+    <!-- Welcome box -->
+    <div class="welcome-box">
+        <h2>Hi there!</h2>
+        <p>You've landed in Whistler's Website. Take a look and have a nice day!</p>
     </div>
 
     <!-- Bottom panel -->
     <div class="bottom-panel">
-        <span>⚠️This website is in beta - not everything is stable!</span>
+        <span>⚠️This website is in beta - not everything is stable and finished!</span>
     </div>
 </body>
 </html>
